@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌻Art for mom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fff8e7;
+            --ink: #3b2a12;
+            --petal: #f5b700;
+            --petal-dark: #d99a00;
+            --seed: #5a3a12;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px 16px;
+            background:
+                radial-gradient(circle at 15% 20%, #ffe79a 0, transparent 35%),
+                radial-gradient(circle at 85% 80%, #ffd36b 0, transparent 40%),
+                var(--bg);
+            color: var(--ink);
+            font-family: "Nunito", system-ui, sans-serif;
+        }
+        form {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            background: #fffdf6;
+            padding: 48px 32px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(90, 58, 18, 0.15);
+        }
+        form::before {
+            content: "🌻";
+            display: block;
+            font-size: 64px;
+            margin-bottom: 8px;
+        }
+        h1 {
+            font-family: "Fraunces", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            line-height: 1.25;
+            margin: 0 0 32px;
+        }
+        button {
+            font: inherit;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--seed);
+            background: var(--petal);
+            border: none;
+            border-radius: 999px;
+            padding: 16px 40px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 var(--petal-dark);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--petal-dark); }
+        button:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--petal-dark); }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h1>Hi mom press this button daily to look at artwork about/of sunflowers</h1>
+        <button type="submit">Click me :D</button>
+        <p id="paintings"></p>
+    </form>
+</body>
+</html>
